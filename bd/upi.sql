@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1
--- Generation Time: Dec 15, 2014 at 04:12 AM
+-- Generation Time: Dec 15, 2014 at 05:38 AM
 -- Server version: 5.6.20
 -- PHP Version: 5.5.15
 
@@ -134,16 +134,15 @@ CREATE TABLE IF NOT EXISTS `documents` (
   `idsubject` int(11) NOT NULL,
   `path` varchar(255) NOT NULL,
   `file` varchar(255) NOT NULL
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=12 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=15 ;
 
 --
 -- Dumping data for table `documents`
 --
 
 INSERT INTO `documents` (`id`, `name`, `size`, `date`, `visibility`, `idsubject`, `path`, `file`) VALUES
-(8, 'Horario 14/15', 0.107749, '2014-11-17 08:37:02', 1, 1, '/files/ALEM', 'horarios.pdf'),
-(9, 'Tema 2', 0.272606, '2014-11-28 04:18:57', 1, 2, '/files/CA', 'bombilla.pdf'),
-(11, 'Presentation', 0.437432, '2014-12-15 01:47:53', 1, 3, '/files/TFG', 'pre.pdf');
+(11, 'Presentation', 0.437432, '2014-12-15 01:47:53', 1, 3, '/files/TFG', 'pre.pdf'),
+(14, 'Documentation', 0.437432, '2014-12-15 04:36:38', 1, 3, '/files/TFG', 'doc.pdf');
 
 -- --------------------------------------------------------
 
@@ -221,7 +220,8 @@ CREATE TABLE IF NOT EXISTS `userssubjects` (
 --
 
 INSERT INTO `userssubjects` (`iduser`, `idsubject`) VALUES
-(3, 1),
+(1, 1),
+(1, 2),
 (1, 3);
 
 --
@@ -306,7 +306,7 @@ MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=2;
 -- AUTO_INCREMENT for table `documents`
 --
 ALTER TABLE `documents`
-MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=12;
+MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=15;
 --
 -- AUTO_INCREMENT for table `subjects`
 --
