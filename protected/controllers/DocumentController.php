@@ -92,7 +92,7 @@ class DocumentController extends Controller
             $model->path = '/files/'.$subject->iniciales;
 
 			if($model->save()) {
-                $model->file->saveAs(Yii::app()->basePath.$model->path.'/'.$model->file);
+                $model->file->saveAs(Yii::app()->basePath.'/../'.$model->path.'/'.$model->file);
 
                 $this->redirect(array('index'));
             }
@@ -171,7 +171,7 @@ class DocumentController extends Controller
 	{
 		$model = $this->loadModel($id);
 
-        unlink(Yii::app()->basePath.$model->path.'/'.$model->file);
+        unlink(Yii::app()->basePath.'/../'.$model->path.'/'.$model->file);
 
         $model->delete();
 

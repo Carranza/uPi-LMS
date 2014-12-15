@@ -30924,3 +30924,618 @@ Stack trace:
 REQUEST_URI=/upi/core/demo/DemoCharts.js
 HTTP_REFERER=http://localhost/upi/
 ---
+2014/12/15 05:20:02 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "core/demo/DemoCharts.js".' in C:\xampp\htdocs\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('core/demo/DemoC...')
+#1 C:\xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\upi\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/upi/core/demo/DemoCharts.js
+HTTP_REFERER=http://localhost/upi/subject/index
+---
+2014/12/15 05:20:24 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "core/demo/DemoCharts.js".' in C:\xampp\htdocs\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('core/demo/DemoC...')
+#1 C:\xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\upi\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/upi/core/demo/DemoCharts.js
+HTTP_REFERER=http://localhost/upi/user/index
+---
+2014/12/15 05:20:26 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "core/demo/DemoCharts.js".' in C:\xampp\htdocs\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('core/demo/DemoC...')
+#1 C:\xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\upi\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/upi/core/demo/DemoCharts.js
+HTTP_REFERER=http://localhost/upi/subject/index
+---
+2014/12/15 05:21:11 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "core/demo/DemoCharts.js".' in C:\xampp\htdocs\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('core/demo/DemoC...')
+#1 C:\xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\upi\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/upi/core/demo/DemoCharts.js
+HTTP_REFERER=http://localhost/upi/document/index
+---
+2014/12/15 05:21:17 [error] [php] unlink(C:\xampp\htdocs\upi\protected/files/ALEM/horarios.pdf): No such file or directory (C:\xampp\htdocs\upi\protected\controllers\DocumentController.php:174)
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\actions\CAction.php(108): ReflectionMethod->invokeArgs()
+#1 C:\xampp\htdocs\yii\framework\web\actions\CInlineAction.php(47): CInlineAction->runWithParamsInternal()
+#2 C:\xampp\htdocs\yii\framework\web\CController.php(308): CInlineAction->runWithParams()
+#3 C:\xampp\htdocs\yii\framework\web\filters\CFilterChain.php(133): DocumentController->runAction()
+#4 C:\xampp\htdocs\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#5 C:\xampp\htdocs\yii\framework\web\CController.php(1145): CAccessControlFilter->filter()
+#6 C:\xampp\htdocs\yii\framework\web\filters\CInlineFilter.php(58): DocumentController->filterAccessControl()
+#7 C:\xampp\htdocs\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter()
+#8 C:\xampp\htdocs\yii\framework\web\CController.php(291): CFilterChain->run()
+#9 C:\xampp\htdocs\yii\framework\web\CController.php(265): DocumentController->runActionWithFilters()
+#10 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): DocumentController->run()
+#11 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#12 C:\xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#13 C:\xampp\htdocs\upi\index.php(13): CWebApplication->run()
+REQUEST_URI=/upi/document/delete?id=8
+in C:\xampp\htdocs\upi\protected\controllers\DocumentController.php (174)
+in C:\xampp\htdocs\upi\index.php (13)
+2014/12/15 05:22:12 [error] [php] unlink(C:\xampp\htdocs\upi\protected/files/ALEM/horarios.pdf): No such file or directory (C:\xampp\htdocs\upi\protected\controllers\DocumentController.php:174)
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\actions\CAction.php(108): ReflectionMethod->invokeArgs()
+#1 C:\xampp\htdocs\yii\framework\web\actions\CInlineAction.php(47): CInlineAction->runWithParamsInternal()
+#2 C:\xampp\htdocs\yii\framework\web\CController.php(308): CInlineAction->runWithParams()
+#3 C:\xampp\htdocs\yii\framework\web\filters\CFilterChain.php(133): DocumentController->runAction()
+#4 C:\xampp\htdocs\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#5 C:\xampp\htdocs\yii\framework\web\CController.php(1145): CAccessControlFilter->filter()
+#6 C:\xampp\htdocs\yii\framework\web\filters\CInlineFilter.php(58): DocumentController->filterAccessControl()
+#7 C:\xampp\htdocs\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter()
+#8 C:\xampp\htdocs\yii\framework\web\CController.php(291): CFilterChain->run()
+#9 C:\xampp\htdocs\yii\framework\web\CController.php(265): DocumentController->runActionWithFilters()
+#10 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): DocumentController->run()
+#11 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#12 C:\xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#13 C:\xampp\htdocs\upi\index.php(13): CWebApplication->run()
+REQUEST_URI=/upi/document/delete?id=8
+in C:\xampp\htdocs\upi\protected\controllers\DocumentController.php (174)
+in C:\xampp\htdocs\upi\index.php (13)
+2014/12/15 05:24:07 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "core/demo/DemoCharts.js".' in C:\xampp\htdocs\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('core/demo/DemoC...')
+#1 C:\xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\upi\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/upi/core/demo/DemoCharts.js
+HTTP_REFERER=http://localhost/upi/subject/index
+---
+2014/12/15 05:24:10 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "core/demo/DemoCharts.js".' in C:\xampp\htdocs\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('core/demo/DemoC...')
+#1 C:\xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\upi\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/upi/core/demo/DemoCharts.js
+HTTP_REFERER=http://localhost/upi/document/index
+---
+2014/12/15 05:24:11 [error] [php] unlink(C:\xampp\htdocs\upi\protected/files/ALEM/../horarios.pdf): No such file or directory (C:\xampp\htdocs\upi\protected\controllers\DocumentController.php:174)
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\actions\CAction.php(108): ReflectionMethod->invokeArgs()
+#1 C:\xampp\htdocs\yii\framework\web\actions\CInlineAction.php(47): CInlineAction->runWithParamsInternal()
+#2 C:\xampp\htdocs\yii\framework\web\CController.php(308): CInlineAction->runWithParams()
+#3 C:\xampp\htdocs\yii\framework\web\filters\CFilterChain.php(133): DocumentController->runAction()
+#4 C:\xampp\htdocs\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#5 C:\xampp\htdocs\yii\framework\web\CController.php(1145): CAccessControlFilter->filter()
+#6 C:\xampp\htdocs\yii\framework\web\filters\CInlineFilter.php(58): DocumentController->filterAccessControl()
+#7 C:\xampp\htdocs\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter()
+#8 C:\xampp\htdocs\yii\framework\web\CController.php(291): CFilterChain->run()
+#9 C:\xampp\htdocs\yii\framework\web\CController.php(265): DocumentController->runActionWithFilters()
+#10 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): DocumentController->run()
+#11 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#12 C:\xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#13 C:\xampp\htdocs\upi\index.php(13): CWebApplication->run()
+REQUEST_URI=/upi/document/delete?id=8
+in C:\xampp\htdocs\upi\protected\controllers\DocumentController.php (174)
+in C:\xampp\htdocs\upi\index.php (13)
+2014/12/15 05:24:44 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "core/demo/DemoCharts.js".' in C:\xampp\htdocs\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('core/demo/DemoC...')
+#1 C:\xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\upi\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/upi/core/demo/DemoCharts.js
+HTTP_REFERER=http://localhost/upi/document/index
+---
+2014/12/15 05:24:47 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "core/demo/DemoCharts.js".' in C:\xampp\htdocs\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('core/demo/DemoC...')
+#1 C:\xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\upi\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/upi/core/demo/DemoCharts.js
+HTTP_REFERER=http://localhost/upi/subject/index
+---
+2014/12/15 05:24:56 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "core/demo/DemoCharts.js".' in C:\xampp\htdocs\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('core/demo/DemoC...')
+#1 C:\xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\upi\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/upi/core/demo/DemoCharts.js
+HTTP_REFERER=http://localhost/upi/user/index
+---
+2014/12/15 05:24:57 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "core/demo/DemoCharts.js".' in C:\xampp\htdocs\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('core/demo/DemoC...')
+#1 C:\xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\upi\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/upi/core/demo/DemoCharts.js
+HTTP_REFERER=http://localhost/upi/document/index
+---
+2014/12/15 05:25:09 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "core/demo/DemoCharts.js".' in C:\xampp\htdocs\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('core/demo/DemoC...')
+#1 C:\xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\upi\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/upi/core/demo/DemoCharts.js
+HTTP_REFERER=http://localhost/upi/document/index
+---
+2014/12/15 05:25:14 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "core/demo/DemoCharts.js".' in C:\xampp\htdocs\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('core/demo/DemoC...')
+#1 C:\xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\upi\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/upi/core/demo/DemoCharts.js
+HTTP_REFERER=http://localhost/upi/attendance/index
+---
+2014/12/15 05:25:19 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "core/demo/DemoCharts.js".' in C:\xampp\htdocs\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('core/demo/DemoC...')
+#1 C:\xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\upi\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/upi/core/demo/DemoCharts.js
+HTTP_REFERER=http://localhost/upi/userSubject/index
+---
+2014/12/15 05:25:34 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "core/demo/DemoCharts.js".' in C:\xampp\htdocs\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('core/demo/DemoC...')
+#1 C:\xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\upi\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/upi/core/demo/DemoCharts.js
+HTTP_REFERER=http://localhost/upi/userSubject/index
+---
+2014/12/15 05:25:37 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "core/demo/DemoCharts.js".' in C:\xampp\htdocs\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('core/demo/DemoC...')
+#1 C:\xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\upi\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/upi/core/demo/DemoCharts.js
+HTTP_REFERER=http://localhost/upi/userSubject/create
+---
+2014/12/15 05:25:42 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "core/demo/DemoCharts.js".' in C:\xampp\htdocs\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('core/demo/DemoC...')
+#1 C:\xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\upi\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/upi/core/demo/DemoCharts.js
+HTTP_REFERER=http://localhost/upi/userSubject/index
+---
+2014/12/15 05:25:46 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "core/demo/DemoCharts.js".' in C:\xampp\htdocs\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('core/demo/DemoC...')
+#1 C:\xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\upi\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/upi/core/demo/DemoCharts.js
+HTTP_REFERER=http://localhost/upi/userSubject/create
+---
+2014/12/15 05:25:50 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "core/demo/DemoCharts.js".' in C:\xampp\htdocs\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('core/demo/DemoC...')
+#1 C:\xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\upi\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/upi/core/demo/DemoCharts.js
+HTTP_REFERER=http://localhost/upi/userSubject/index
+---
+2014/12/15 05:25:52 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "core/demo/DemoCharts.js".' in C:\xampp\htdocs\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('core/demo/DemoC...')
+#1 C:\xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\upi\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/upi/core/demo/DemoCharts.js
+HTTP_REFERER=http://localhost/upi/userAttendance/index
+---
+2014/12/15 05:25:55 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "core/demo/DemoCharts.js".' in C:\xampp\htdocs\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('core/demo/DemoC...')
+#1 C:\xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\upi\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/upi/core/demo/DemoCharts.js
+HTTP_REFERER=http://localhost/upi/userAttendance/index
+---
+2014/12/15 05:25:59 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "core/demo/DemoCharts.js".' in C:\xampp\htdocs\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('core/demo/DemoC...')
+#1 C:\xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\upi\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/upi/core/demo/DemoCharts.js
+HTTP_REFERER=http://localhost/upi/device/index
+---
+2014/12/15 05:26:00 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "core/demo/DemoCharts.js".' in C:\xampp\htdocs\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('core/demo/DemoC...')
+#1 C:\xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\upi\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/upi/core/demo/DemoCharts.js
+HTTP_REFERER=http://localhost/upi/userAttendance/index
+---
+2014/12/15 05:26:04 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "core/demo/DemoCharts.js".' in C:\xampp\htdocs\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('core/demo/DemoC...')
+#1 C:\xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\upi\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/upi/core/demo/DemoCharts.js
+HTTP_REFERER=http://localhost/upi/device/index
+---
+2014/12/15 05:26:07 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "core/demo/DemoCharts.js".' in C:\xampp\htdocs\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('core/demo/DemoC...')
+#1 C:\xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\upi\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/upi/core/demo/DemoCharts.js
+HTTP_REFERER=http://localhost/upi/userAttendance/index
+---
+2014/12/15 05:26:07 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "core/demo/DemoCharts.js".' in C:\xampp\htdocs\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('core/demo/DemoC...')
+#1 C:\xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\upi\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/upi/core/demo/DemoCharts.js
+HTTP_REFERER=http://localhost/upi/userSubject/index
+---
+2014/12/15 05:26:15 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "core/demo/DemoCharts.js".' in C:\xampp\htdocs\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('core/demo/DemoC...')
+#1 C:\xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\upi\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/upi/core/demo/DemoCharts.js
+HTTP_REFERER=http://localhost/upi/attendance/index
+---
+2014/12/15 05:26:21 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "core/demo/DemoCharts.js".' in C:\xampp\htdocs\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('core/demo/DemoC...')
+#1 C:\xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\upi\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/upi/core/demo/DemoCharts.js
+HTTP_REFERER=http://localhost/upi/document/index
+---
+2014/12/15 05:26:23 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "core/demo/DemoCharts.js".' in C:\xampp\htdocs\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('core/demo/DemoC...')
+#1 C:\xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\upi\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/upi/core/demo/DemoCharts.js
+HTTP_REFERER=http://localhost/upi/subject/index
+---
+2014/12/15 05:26:25 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "core/demo/DemoCharts.js".' in C:\xampp\htdocs\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('core/demo/DemoC...')
+#1 C:\xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\upi\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/upi/core/demo/DemoCharts.js
+HTTP_REFERER=http://localhost/upi/user/index
+---
+2014/12/15 05:26:27 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "core/demo/DemoCharts.js".' in C:\xampp\htdocs\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('core/demo/DemoC...')
+#1 C:\xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\upi\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/upi/core/demo/DemoCharts.js
+HTTP_REFERER=http://localhost/upi/site/index
+---
+2014/12/15 05:26:28 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "core/demo/DemoCharts.js".' in C:\xampp\htdocs\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('core/demo/DemoC...')
+#1 C:\xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\upi\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/upi/core/demo/DemoCharts.js
+HTTP_REFERER=http://localhost/upi/user/index
+---
+2014/12/15 05:26:29 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "core/demo/DemoCharts.js".' in C:\xampp\htdocs\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('core/demo/DemoC...')
+#1 C:\xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\upi\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/upi/core/demo/DemoCharts.js
+HTTP_REFERER=http://localhost/upi/subject/index
+---
+2014/12/15 05:26:30 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "core/demo/DemoCharts.js".' in C:\xampp\htdocs\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('core/demo/DemoC...')
+#1 C:\xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\upi\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/upi/core/demo/DemoCharts.js
+HTTP_REFERER=http://localhost/upi/document/index
+---
+2014/12/15 05:26:31 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "core/demo/DemoCharts.js".' in C:\xampp\htdocs\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('core/demo/DemoC...')
+#1 C:\xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\upi\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/upi/core/demo/DemoCharts.js
+HTTP_REFERER=http://localhost/upi/attendance/index
+---
+2014/12/15 05:26:32 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "core/demo/DemoCharts.js".' in C:\xampp\htdocs\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('core/demo/DemoC...')
+#1 C:\xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\upi\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/upi/core/demo/DemoCharts.js
+HTTP_REFERER=http://localhost/upi/userSubject/index
+---
+2014/12/15 05:26:33 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "core/demo/DemoCharts.js".' in C:\xampp\htdocs\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('core/demo/DemoC...')
+#1 C:\xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\upi\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/upi/core/demo/DemoCharts.js
+HTTP_REFERER=http://localhost/upi/device/index
+---
+2014/12/15 05:26:33 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "core/demo/DemoCharts.js".' in C:\xampp\htdocs\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('core/demo/DemoC...')
+#1 C:\xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\upi\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/upi/core/demo/DemoCharts.js
+HTTP_REFERER=http://localhost/upi/document/index
+---
+2014/12/15 05:30:02 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "core/demo/DemoCharts.js".' in C:\xampp\htdocs\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('core/demo/DemoC...')
+#1 C:\xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\upi\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/upi/core/demo/DemoCharts.js
+HTTP_REFERER=http://localhost/upi/document/create
+---
+2014/12/15 05:30:21 [warning] [application] Failed to set unsafe attribute "file" of "Document".
+in C:\xampp\htdocs\upi\protected\controllers\DocumentController.php (86)
+in C:\xampp\htdocs\upi\index.php (13)
+2014/12/15 05:30:21 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "core/demo/DemoCharts.js".' in C:\xampp\htdocs\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('core/demo/DemoC...')
+#1 C:\xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\upi\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/upi/core/demo/DemoCharts.js
+HTTP_REFERER=http://localhost/upi/document/create
+---
+2014/12/15 05:30:37 [warning] [application] Failed to set unsafe attribute "file" of "Document".
+in C:\xampp\htdocs\upi\protected\controllers\DocumentController.php (86)
+in C:\xampp\htdocs\upi\index.php (13)
+2014/12/15 05:30:37 [error] [php] Trying to get property of non-object (C:\xampp\htdocs\upi\protected\controllers\DocumentController.php:89)
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\filters\CFilterChain.php(133): DocumentController->runAction()
+#1 C:\xampp\htdocs\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#2 C:\xampp\htdocs\yii\framework\web\CController.php(1145): CAccessControlFilter->filter()
+#3 C:\xampp\htdocs\yii\framework\web\filters\CInlineFilter.php(58): DocumentController->filterAccessControl()
+#4 C:\xampp\htdocs\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter()
+#5 C:\xampp\htdocs\yii\framework\web\CController.php(291): CFilterChain->run()
+#6 C:\xampp\htdocs\yii\framework\web\CController.php(265): DocumentController->runActionWithFilters()
+#7 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): DocumentController->run()
+#8 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#9 C:\xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#10 C:\xampp\htdocs\upi\index.php(13): CWebApplication->run()
+REQUEST_URI=/upi/document/create
+in C:\xampp\htdocs\upi\protected\controllers\DocumentController.php (89)
+in C:\xampp\htdocs\upi\index.php (13)
+2014/12/15 05:31:12 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "core/demo/DemoCharts.js".' in C:\xampp\htdocs\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('core/demo/DemoC...')
+#1 C:\xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\upi\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/upi/core/demo/DemoCharts.js
+HTTP_REFERER=http://localhost/upi/document/
+---
+2014/12/15 05:31:12 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "core/demo/DemoCharts.js".' in C:\xampp\htdocs\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('core/demo/DemoC...')
+#1 C:\xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\upi\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/upi/core/demo/DemoCharts.js
+HTTP_REFERER=http://localhost/upi/document
+---
+2014/12/15 05:31:19 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "core/demo/DemoCharts.js".' in C:\xampp\htdocs\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('core/demo/DemoC...')
+#1 C:\xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\upi\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/upi/core/demo/DemoCharts.js
+HTTP_REFERER=http://localhost/upi/document/create
+---
+2014/12/15 05:32:48 [warning] [application] Failed to set unsafe attribute "file" of "Document".
+in C:\xampp\htdocs\upi\protected\controllers\DocumentController.php (86)
+in C:\xampp\htdocs\upi\index.php (13)
+2014/12/15 05:32:48 [error] [php] move_uploaded_file(C:\xampp\htdocs\upi\protected/files/TFG/asdas.pdf): failed to open stream: No such file or directory (C:\xampp\htdocs\yii\framework\web\CUploadedFile.php:198)
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\actions\CInlineAction.php(49): DocumentController->actionCreate()
+#1 C:\xampp\htdocs\yii\framework\web\CController.php(308): CInlineAction->runWithParams()
+#2 C:\xampp\htdocs\yii\framework\web\filters\CFilterChain.php(133): DocumentController->runAction()
+#3 C:\xampp\htdocs\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#4 C:\xampp\htdocs\yii\framework\web\CController.php(1145): CAccessControlFilter->filter()
+#5 C:\xampp\htdocs\yii\framework\web\filters\CInlineFilter.php(58): DocumentController->filterAccessControl()
+#6 C:\xampp\htdocs\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter()
+#7 C:\xampp\htdocs\yii\framework\web\CController.php(291): CFilterChain->run()
+#8 C:\xampp\htdocs\yii\framework\web\CController.php(265): DocumentController->runActionWithFilters()
+#9 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): DocumentController->run()
+#10 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#11 C:\xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#12 C:\xampp\htdocs\upi\index.php(13): CWebApplication->run()
+REQUEST_URI=/upi/document/create
+in C:\xampp\htdocs\upi\protected\controllers\DocumentController.php (95)
+in C:\xampp\htdocs\upi\index.php (13)
+2014/12/15 05:34:14 [warning] [application] Failed to set unsafe attribute "file" of "Document".
+in C:\xampp\htdocs\upi\protected\controllers\DocumentController.php (86)
+in C:\xampp\htdocs\upi\index.php (13)
+2014/12/15 05:34:14 [error] [php] Trying to get property of non-object (C:\xampp\htdocs\upi\protected\controllers\DocumentController.php:89)
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\filters\CFilterChain.php(133): DocumentController->runAction()
+#1 C:\xampp\htdocs\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#2 C:\xampp\htdocs\yii\framework\web\CController.php(1145): CAccessControlFilter->filter()
+#3 C:\xampp\htdocs\yii\framework\web\filters\CInlineFilter.php(58): DocumentController->filterAccessControl()
+#4 C:\xampp\htdocs\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter()
+#5 C:\xampp\htdocs\yii\framework\web\CController.php(291): CFilterChain->run()
+#6 C:\xampp\htdocs\yii\framework\web\CController.php(265): DocumentController->runActionWithFilters()
+#7 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): DocumentController->run()
+#8 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#9 C:\xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#10 C:\xampp\htdocs\upi\index.php(13): CWebApplication->run()
+REQUEST_URI=/upi/document/create
+in C:\xampp\htdocs\upi\protected\controllers\DocumentController.php (89)
+in C:\xampp\htdocs\upi\index.php (13)
+2014/12/15 05:34:52 [warning] [application] Failed to set unsafe attribute "file" of "Document".
+in C:\xampp\htdocs\upi\protected\controllers\DocumentController.php (86)
+in C:\xampp\htdocs\upi\index.php (13)
+2014/12/15 05:34:52 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "core/demo/DemoCharts.js".' in C:\xampp\htdocs\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('core/demo/DemoC...')
+#1 C:\xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\upi\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/upi/core/demo/DemoCharts.js
+HTTP_REFERER=http://localhost/upi/document/index
+---
+2014/12/15 05:35:05 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "core/demo/DemoCharts.js".' in C:\xampp\htdocs\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('core/demo/DemoC...')
+#1 C:\xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\upi\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/upi/core/demo/DemoCharts.js
+HTTP_REFERER=http://localhost/upi/document/index
+---
+2014/12/15 05:35:10 [error] [php] unlink(C:\xampp\htdocs\upi\protected/..//files/TFG/asdas.pdf): No such file or directory (C:\xampp\htdocs\upi\protected\controllers\DocumentController.php:174)
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\actions\CAction.php(108): ReflectionMethod->invokeArgs()
+#1 C:\xampp\htdocs\yii\framework\web\actions\CInlineAction.php(47): CInlineAction->runWithParamsInternal()
+#2 C:\xampp\htdocs\yii\framework\web\CController.php(308): CInlineAction->runWithParams()
+#3 C:\xampp\htdocs\yii\framework\web\filters\CFilterChain.php(133): DocumentController->runAction()
+#4 C:\xampp\htdocs\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#5 C:\xampp\htdocs\yii\framework\web\CController.php(1145): CAccessControlFilter->filter()
+#6 C:\xampp\htdocs\yii\framework\web\filters\CInlineFilter.php(58): DocumentController->filterAccessControl()
+#7 C:\xampp\htdocs\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter()
+#8 C:\xampp\htdocs\yii\framework\web\CController.php(291): CFilterChain->run()
+#9 C:\xampp\htdocs\yii\framework\web\CController.php(265): DocumentController->runActionWithFilters()
+#10 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): DocumentController->run()
+#11 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#12 C:\xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#13 C:\xampp\htdocs\upi\index.php(13): CWebApplication->run()
+REQUEST_URI=/upi/document/delete?id=13
+in C:\xampp\htdocs\upi\protected\controllers\DocumentController.php (174)
+in C:\xampp\htdocs\upi\index.php (13)
+2014/12/15 05:36:00 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "core/demo/DemoCharts.js".' in C:\xampp\htdocs\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('core/demo/DemoC...')
+#1 C:\xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\upi\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/upi/core/demo/DemoCharts.js
+HTTP_REFERER=http://localhost/upi/document/create
+---
+2014/12/15 05:36:30 [warning] [application] Failed to set unsafe attribute "file" of "Document".
+in C:\xampp\htdocs\upi\protected\controllers\DocumentController.php (86)
+in C:\xampp\htdocs\upi\index.php (13)
+2014/12/15 05:36:30 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "core/demo/DemoCharts.js".' in C:\xampp\htdocs\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('core/demo/DemoC...')
+#1 C:\xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\upi\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/upi/core/demo/DemoCharts.js
+HTTP_REFERER=http://localhost/upi/document/create
+---
+2014/12/15 05:36:38 [warning] [application] Failed to set unsafe attribute "file" of "Document".
+in C:\xampp\htdocs\upi\protected\controllers\DocumentController.php (86)
+in C:\xampp\htdocs\upi\index.php (13)
+2014/12/15 05:36:38 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "core/demo/DemoCharts.js".' in C:\xampp\htdocs\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('core/demo/DemoC...')
+#1 C:\xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\upi\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/upi/core/demo/DemoCharts.js
+HTTP_REFERER=http://localhost/upi/document/index
+---
+2014/12/15 05:37:25 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "core/demo/DemoCharts.js".' in C:\xampp\htdocs\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('core/demo/DemoC...')
+#1 C:\xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\upi\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/upi/core/demo/DemoCharts.js
+HTTP_REFERER=http://localhost/upi/document/index
+---
+2014/12/15 05:37:26 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "core/demo/DemoCharts.js".' in C:\xampp\htdocs\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('core/demo/DemoC...')
+#1 C:\xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\upi\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/upi/core/demo/DemoCharts.js
+HTTP_REFERER=http://localhost/upi/document/index
+---
+2014/12/15 05:37:32 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "core/demo/DemoCharts.js".' in C:\xampp\htdocs\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('core/demo/DemoC...')
+#1 C:\xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\upi\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/upi/core/demo/DemoCharts.js
+HTTP_REFERER=http://localhost/upi/subject/index
+---
+2014/12/15 05:37:32 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "core/demo/DemoCharts.js".' in C:\xampp\htdocs\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('core/demo/DemoC...')
+#1 C:\xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\upi\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/upi/core/demo/DemoCharts.js
+HTTP_REFERER=http://localhost/upi/user/index
+---
+2014/12/15 05:37:33 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "core/demo/DemoCharts.js".' in C:\xampp\htdocs\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('core/demo/DemoC...')
+#1 C:\xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\upi\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/upi/core/demo/DemoCharts.js
+HTTP_REFERER=http://localhost/upi/site/index
+---
