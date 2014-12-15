@@ -1,18 +1,13 @@
 <?php
-/* @var $this UserSubjectController */
-/* @var $model UserSubject */
+$this->pageTitle=Yii::app()->name. ' - Registrations';
 
 $this->breadcrumbs=array(
-	'User Subjects'=>array('index'),
-	'Create',
+    array('name' => 'Registrations', 'url' => array('userSubject/index')),
+    array('name' => 'Create'),
 );
 
-$this->menu=array(
-	array('label'=>'List UserSubject', 'url'=>array('index')),
-	array('label'=>'Manage UserSubject', 'url'=>array('admin')),
-);
 ?>
 
-<h1>Create UserSubject</h1>
+<?php $action='Create '; ?>
 
-<?php $this->renderPartial('_form', array('model'=>$model)); ?>
+<?php $this->renderPartial('_form', array('model'=>$model, 'action'=>$action)); ?>

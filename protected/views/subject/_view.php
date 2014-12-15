@@ -9,6 +9,6 @@
     <td class="text-right">
         <?php echo CHtml::link('<i class="fa fa-eye"></i>',array('/subject/view', 'id'=>$data->id), array('class'=>'btn btn-xs btn-default btn-equal', 'data-toggle'=>'tooltip', 'data-placement'=>'top', 'data-original-title'=>'View subject')); ?>
         <?php echo CHtml::link('<i class="fa fa-pencil"></i>',array('/subject/update', 'id'=>$data->id), array('class'=>'btn btn-xs btn-default btn-equal', 'data-toggle'=>'tooltip', 'data-placement'=>'top', 'data-original-title'=>'Edit subject')); ?>
-        <?php echo CHtml::link('<i class="fa fa-trash-o"></i>',array('/subject/delete', 'id'=>$data->id), array('class'=>'btn btn-xs btn-default btn-equal', 'data-toggle'=>'tooltip', 'data-placement'=>'top', 'data-original-title'=>'Delete subject', 'confirm' => 'Are you sure you want to delete this user?')); ?>
+        <?php echo CHtml::link('<i class="fa fa-trash-o"></i>',array('/subject/delete', 'id'=>$data->id), array('class'=>'btn btn-xs btn-default btn-equal', 'data-toggle'=>'tooltip', 'data-placement'=>'top', 'data-original-title'=>'Delete subject', 'confirm' => 'Are you sure you want to delete this subject?')); ?>
     </td>
 </tr>

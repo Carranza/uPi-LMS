@@ -1,21 +1,13 @@
 <?php
-/* @var $this DocumentController */
-/* @var $model Document */
+$this->pageTitle=Yii::app()->name. ' - Documents';
 
 $this->breadcrumbs=array(
-	'Documents'=>array('index'),
-	$model->name=>array('view','id'=>$model->id),
-	'Update',
+    array('name' => 'Documents', 'url' => array('document/index')),
+    array('name' => 'Update'),
 );
 
-$this->menu=array(
-	array('label'=>'List Document', 'url'=>array('index')),
-	array('label'=>'Create Document', 'url'=>array('create')),
-	array('label'=>'View Document', 'url'=>array('view', 'id'=>$model->id)),
-	array('label'=>'Manage Document', 'url'=>array('admin')),
-);
 ?>
 
-<h1>Update Document <?php echo $model->id; ?></h1>
+<?php $action='Update '; ?>
 
-<?php $this->renderPartial('_form', array('model'=>$model)); ?>
+<?php $this->renderPartial('_form', array('model'=>$model, 'action'=>$action)); ?>

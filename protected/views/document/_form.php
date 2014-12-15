@@ -1,91 +1,68 @@
-<?php
-/* @var $this DocumentController */
-/* @var $model Document */
-/* @var $form CActiveForm */
-?>
-
-<div class="form">
-
-<?php $form=$this->beginWidget('CActiveForm', array(
-	'id'=>'upload-form', // document-form
-	// Please note: When you enable ajax validation, make sure the corresponding
-	// controller action is handling ajax validation correctly.
-	// There is a call to performAjaxValidation() commented in generated controller code.
-	// See class documentation of CActiveForm for details on this.
-	'enableAjaxValidation'=>false,
-    'htmlOptions' => array('enctype' => 'multipart/form-data'),
-)); ?>
-
-	<p class="note">Fields with <span class="required">*</span> are required.</p>
-
-	<?php echo $form->errorSummary($model); ?>
-
-	<div class="row">
-		<?php echo $form->labelEx($model,'name'); ?>
-		<?php echo $form->textField($model,'name',array('size'=>60,'maxlength'=>255)); ?>
-		<?php echo $form->error($model,'name'); ?>
-	</div>
-
-    <!--
-	<div class="row">
-		<?php // echo $form->labelEx($model,'size'); ?>
-		<?php // echo $form->textField($model,'size'); ?>
-		<?php // echo $form->error($model,'size'); ?>
-	</div>
-	-->
-
-    <!--
-	<div class="row">
-		<?php // echo $form->labelEx($model,'date'); ?>
-		<?php // echo $form->textField($model,'date'); ?>
-		<?php // echo $form->error($model,'date'); ?>
-	</div>
-	-->
-
-	<div class="row">
-		<?php echo $form->labelEx($model,'visibility'); ?>
-		<?php // echo $form->textField($model,'visibility'); ?>
-        <?php echo $form->dropDownList($model,'visibility', array(0 => 'No visible', 1 => 'Visible'),array('empty'=>'Select one type of visibility...')); ?>
-		<?php echo $form->error($model,'visibility'); ?>
-	</div>
-
-	<div class="row">
-		<?php echo $form->labelEx($model,'idsubject'); ?>
-		<?php // echo $form->textField($model,'idsubject'); ?>
-
-        <?php // TODO: limitar la asignacion dependiendo del rol ?>
-
-        <?php echo $form->dropDownList($model,'idsubject', CHtml::listData(Subject::model()->findAll(), 'id', 'nombre'), array('empty'=>'Select subject...')); ?>
-        <?php echo $form->error($model,'idsubject'); ?>
-	</div>
-
-    <!--
-	<div class="row">
-		<?php // echo $form->labelEx($model,'path'); ?>
-		<?php // echo $form->textField($model,'path',array('size'=>60,'maxlength'=>255)); ?>
-		<?php // echo $form->error($model,'path'); ?>
-	</div>
-	-->
-
-    <!--
-	<div class="row">
-		<?php // echo $form->labelEx($model,'file'); ?>
-		<?php // echo $form->textField($model,'file',array('size'=>60,'maxlength'=>255)); ?>
-		<?php // echo $form->error($model,'file'); ?>
-	</div>
-    -->
-
-    <div class="row">
-        <?php echo $form->labelEx($model,'file'); ?>
-        <?php echo $form->fileField($model,'file'); ?>
-        <?php echo $form->error($model,'file'); ?>
-        <p class="hint"> Max size 3 MB </p>
+<div class="row">
+    <div class="col-lg-12">
+        <p>
+            Fields with <span style="color:red">*</span> are required.
+        </p>
     </div>
+</div>
+<div class="row">
+    <!-- START BASIC VALIDATION FORM -->
+    <div class="col-lg-12">
+        <div class="box box-outlined">
+            <div class="box-head">
+                <header><h4 class="text-light"><?php echo $action; ?> <strong>User</strong></h4></header>
+            </div>
+            <div class="box-body no-padding">
+                <?php $form=$this->beginWidget('CActiveForm', array(
+                    'id'=>'upload-form',
+                    'htmlOptions'=>array('enctype' => 'multipart/form-data', 'class'=>'form-horizontal form-bordered form-validate', 'role'=>'form', 'novalidate'=>'novalidate',),
+                    'enableAjaxValidation'=>false,
+                )); ?>
+                <!--<form class="form-horizontal form-bordered form-validate" role="form" novalidate="novalidate">-->
+                <div class="form-group">
+                    <div class="col-lg-3 col-sm-2">
+                        <?php echo $form->labelEx($model,'name', array('class'=>'control-label')); ?>
+                    </div>
+                    <div class="col-lg-9 col-sm-10">
+                        <?php echo $form->textField($model,'name',array('size'=>60,'maxlength'=>255,'class'=>'form-control','placeholder'=>'Name','required data-rule-minlength'=>'2')); ?>
+                    </div>
+                </div>
 
-	<div class="row buttons">
-		<?php echo CHtml::submitButton($model->isNewRecord ? 'Create' : 'Save'); ?>
-	</div>
+                <div class="form-group">
+                    <div class="col-lg-3 col-sm-2">
+                        <?php echo $form->labelEx($model,'visibility', array('class'=>'control-label')); ?>
+                    </div>
+                    <div class="col-lg-9 col-sm-10">
+                        <?php echo $form->dropDownList($model,'visibility', array(0 => 'No visible', 1 => 'Visible'),array('empty'=>'Select one type of visibility...','class'=>'form-control')); ?>
+                    </div>
+                </div>
 
-<?php $this->endWidget(); ?>
+                <div class="form-group">
+                    <div class="col-lg-3 col-sm-2">
+                        <?php echo $form->labelEx($model,'idsubject', array('class'=>'control-label')); ?>
+                    </div>
+                    <div class="col-lg-9 col-sm-10">
+                        <?php echo $form->dropDownList($model,'idsubject', CHtml::listData(Subject::model()->findAll(), 'id', 'nombre'), array('empty'=>'Select subject...','class'=>'form-control')); ?>
+                    </div>
+                </div>
 
-</div><!-- form -->
+                <div class="form-group">
+                    <div class="col-lg-3 col-sm-2">
+                        <?php echo $form->labelEx($model,'file'); ?>
+                    </div>
+                    <div class="col-lg-9 col-sm-10">
+                        <?php echo $form->fileField($model,'file'); ?>
+                    </div>
+                </div>
+
+
+                <div class="form-footer col-lg-offset-3 col-sm-offset-2">
+                    <?php echo CHtml::htmlButton($model->isNewRecord ? 'Create' : 'Update', array('type' => 'submit', 'class' => 'btn btn-primary')); ?>
+                </div>
+                <?php $this->endWidget(); ?>
+                <!-- </form> -->
+            </div>
+        </div><!--end .box -->
+    </div><!--end .col-lg-6 -->
+    <!-- END BASIC VALIDATION FORM -->
+</div><!--end .row -->

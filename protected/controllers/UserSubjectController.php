@@ -6,7 +6,7 @@ class UserSubjectController extends Controller
 	 * @var string the default layout for the views. Defaults to '//layouts/column2', meaning
 	 * using two-column layout. See 'protected/views/layouts/column2.php'.
 	 */
-	public $layout='//layouts/column2';
+	public $title='';
 
 	/**
 	 * @return array action filters
@@ -61,9 +61,10 @@ class UserSubjectController extends Controller
 	 */
 	public function actionView($iduser, $idsubject)
 	{
-		$this->render('view',array(
-			'model'=>$this->loadModel($iduser, $idsubject),
-		));
+        $this->layout='main';
+        $this->title='Registrations';
+
+        $this->redirect(array('index'));
 	}
 
 	/**
@@ -72,6 +73,9 @@ class UserSubjectController extends Controller
 	 */
 	public function actionCreate()
 	{
+        $this->layout='main';
+        $this->title='Registrations';
+
 		$model = new UserSubject;
 
 		// Uncomment the following line if AJAX validation is needed
@@ -97,6 +101,9 @@ class UserSubjectController extends Controller
 	 */
 	public function actionUpdate($iduser, $idsubject)
 	{
+        $this->layout='main';
+        $this->title='Registrations';
+
 		$model = $this->loadModel($iduser, $idsubject);
 
 		// Uncomment the following line if AJAX validation is needed
@@ -106,7 +113,7 @@ class UserSubjectController extends Controller
 		{
 			$model->attributes=$_POST['UserSubject'];
 			if($model->save())
-				$this->redirect(array('view','iduser'=>$model->iduser, 'idsubject'=>$model->idsubject));
+				$this->redirect(array('index'));
 		}
 
 		$this->render('update',array(
@@ -121,12 +128,15 @@ class UserSubjectController extends Controller
 	 */
 	public function actionDelete($iduser, $idsubject)
 	{
+        $this->layout='main';
+        $this->title='Registrations';
+
 		$model = $this->loadModel($iduser, $idsubject);
         $model->delete();
 
 		// if AJAX request (triggered by deletion via admin grid view), we should not redirect the browser
 		if(!isset($_GET['ajax']))
-			$this->redirect(isset($_POST['returnUrl']) ? $_POST['returnUrl'] : array('admin'));
+			$this->redirect('index');
 	}
 
 	/**
@@ -134,6 +144,9 @@ class UserSubjectController extends Controller
 	 */
 	public function actionIndex()
 	{
+        $this->layout='main';
+        $this->title='Registrations';
+
 		$dataProvider = new CActiveDataProvider('UserSubject');
 		$this->render('index',array(
 			'dataProvider'=>$dataProvider,
@@ -145,6 +158,9 @@ class UserSubjectController extends Controller
 	 */
 	public function actionAdmin()
 	{
+        $this->layout='main';
+        $this->title='Registrations';
+
 		$model=new UserSubject('search');
 		$model->unsetAttributes();  // clear any default values
 		if(isset($_GET['UserSubject']))

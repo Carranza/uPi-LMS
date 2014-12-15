@@ -108,6 +108,7 @@
             <!-- BEGIN MAIN MENU -->
 
             <?php // TODO: menu con con los componentes de yii (problema de incluir active en <a>) ?>
+            <?php if(Yii::app()->user->getState('rol') === 'admin') { ?>
             <?php $this->widget('application.components.MyMenu',array(
                 'activateItemsOuter'=>false,
                 'linkLabelWrapper' => 'span',
@@ -124,8 +125,8 @@
                     array('label'=>'<i class="fa fa-tags fa-fw"></i><span class="title">Subject</span>', 'url'=>array('/subject/index'), ),
                     array('label'=>'<i class="fa fa-copy fa-fw"></i><span class="title">Documents</span>', 'url'=>array('/document/index')),
                     array('label'=>'<i class="fa fa-calendar fa-fw"></i><span class="title">Attendances</span>', 'url'=>array('/attendance/index')),
-                    array('label'=>'<i class="fa fa-calendar fa-fw"></i><span class="title">Registrations</span>', 'url'=>array('/attendance/index')),
-                    array('label'=>'<i class="fa fa-users fa-fw"></i><span class="title">Anotations</span>', 'url'=>array('/attendance/index')),
+                    array('label'=>'<i class="fa fa-calendar fa-fw"></i><span class="title">Registrations</span>', 'url'=>array('/userSubject/index')),
+                    array('label'=>'<i class="fa fa-users fa-fw"></i><span class="title">Anotations</span>', 'url'=>array('/userAttendance/index')),
                     array('label'=>'<i class="fa fa-laptop fa-fw"></i><span class="title">Devices</span>', 'url'=>array('/device/index')),
 
                     // array('label'=>'About', 'url'=>array('/site/page', 'view'=>'about')),
@@ -134,6 +135,25 @@
                     // array('label'=>'Logout ('.Yii::app()->user->name.')', 'url'=>array('/site/logout'), 'visible'=>!Yii::app()->user->isGuest)
                 ),
             )); ?>
+            <?php } else { ?>
+                <?php $this->widget('application.components.MyMenu',array(
+                    'activateItemsOuter'=>false,
+                    'linkLabelWrapper' => 'span',
+                    'activateItems' => true,
+                    'id' => 'search-type',
+
+                    'encodeLabel'=>false,
+                    'htmlOptions'=>array('class'=>'main-menu'),
+                    // 'activeCssClass'=>'active',
+                    'items'=>array(
+                        array('label'=>'<i class="fa fa-home fa-fw"></i><span class="title">Home</span>', 'url'=>array('/site/index'),),
+                        array('label'=>'<i class="fa fa-tags fa-fw"></i><span class="title">Subject</span>', 'url'=>array('/subject/index'), ),
+                        array('label'=>'<i class="fa fa-copy fa-fw"></i><span class="title">Documents</span>', 'url'=>array('/document/index')),
+                        array('label'=>'<i class="fa fa-calendar fa-fw"></i><span class="title">Attendances</span>', 'url'=>array('/attendance/index')),
+                        array('label'=>'<i class="fa fa-users fa-fw"></i><span class="title">Anotations</span>', 'url'=>array('/userAttendance/index')),
+                    ),
+                )); ?>
+            <?php } ?>
 
             <!--
             <ul class="main-menu">

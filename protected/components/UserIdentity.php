@@ -39,6 +39,7 @@ class UserIdentity extends CUserIdentity
 
             Yii::app()->user->setState('name', $user->name);
             Yii::app()->user->setState('surname', $user->surname);
+            Yii::app()->user->setState('rol', $user->rol);
 
             $this->errorCode = self::ERROR_NONE;
         }

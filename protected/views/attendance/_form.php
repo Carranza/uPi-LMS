@@ -1,58 +1,64 @@
-<?php
-/* @var $this AttendanceController */
-/* @var $model Attendance */
-/* @var $form CActiveForm */
-?>
+<div class="row">
+    <div class="col-lg-12">
+        <p>
+            Fields with <span style="color:red">*</span> are required.
+        </p>
+    </div>
+</div>
+<div class="row">
+    <!-- START BASIC VALIDATION FORM -->
+    <div class="col-lg-12">
+        <div class="box box-outlined">
+            <div class="box-head">
+                <header><h4 class="text-light"><?php echo $action; ?><strong>User</strong></h4></header>
+            </div>
+            <div class="box-body no-padding">
+                <?php $form=$this->beginWidget('CActiveForm', array(
+                    'id'=>'attendance-form',
+                    'htmlOptions'=>array('class'=>'form-horizontal form-bordered form-validate', 'role'=>'form', 'novalidate'=>'novalidate',),
+                    'enableAjaxValidation'=>false,
+                )); ?>
+                <!--<form class="form-horizontal form-bordered form-validate" role="form" novalidate="novalidate">-->
+                <div class="form-group">
+                    <div class="col-lg-3 col-sm-2">
+                        <?php echo $form->labelEx($model,'end', array('class'=>'control-label')); ?>
+                    </div>
+                    <div class="col-lg-9 col-sm-10">
+                        <?php echo $form->dropDownList($model,'end', array(10 => '10 minutes', 20 => '20 minutes', 30 => '30 minutes'),array('empty'=>'Select an interval...','class'=>'form-control')); ?>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="col-lg-3 col-sm-2">
+                        <?php echo $form->labelEx($model,'tipo', array('class'=>'control-label')); ?>
+                    </div>
+                    <div class="col-lg-9 col-sm-10">
+                        <?php echo $form->dropDownList($model,'tipo', array('T' => 'Teoria', 'P' => 'Practicas'),array('empty'=>'Select one type...','class'=>'form-control')); ?>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="col-lg-3 col-sm-2">
+                        <?php echo $form->labelEx($model,'idsubject', array('class'=>'control-label')); ?>
+                    </div>
+                    <div class="col-lg-9 col-sm-10">
+                        <?php echo $form->dropDownList($model,'idsubject', CHtml::listData(Subject::model()->findAll(), 'id', 'nombre'), array('empty'=>'Select subject...','class'=>'form-control')); ?>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="col-lg-3 col-sm-2">
+                        <?php echo $form->labelEx($model,'iddevice', array('class'=>'control-label')); ?>
+                    </div>
+                    <div class="col-lg-9 col-sm-10">
+                        <?php echo $form->dropDownList($model,'iddevice', CHtml::listData(Device::model()->findAll(), 'id', 'bname'), array('empty'=>'Select class...','class'=>'form-control')); ?>
+                    </div>
+                </div>
 
-<div class="form">
-
-<?php $form=$this->beginWidget('CActiveForm', array(
-	'id'=>'attendance-form',
-	// Please note: When you enable ajax validation, make sure the corresponding
-	// controller action is handling ajax validation correctly.
-	// There is a call to performAjaxValidation() commented in generated controller code.
-	// See class documentation of CActiveForm for details on this.
-	'enableAjaxValidation'=>false,
-)); ?>
-
-	<p class="note">Fields with <span class="required">*</span> are required.</p>
-
-	<?php echo $form->errorSummary($model); ?>
-
-	<div class="row">
-		<?php // echo $form->labelEx($model,'start'); ?>
-		<?php // echo $form->textField($model,'start'); ?>
-		<?php // echo $form->error($model,'start'); ?>
-	</div>
-
-	<div class="row">
-		<?php echo $form->labelEx($model,'end'); ?>
-        <?php echo $form->dropDownList($model,'end', array(10 => '10 minutes', 20 => '20 minutes', 30 => '30 minutes'),array('empty'=>'Select an interval...')); ?>
-		<?php echo $form->error($model,'end'); ?>
-	</div>
-
-	<div class="row">
-		<?php echo $form->labelEx($model,'tipo'); ?>
-        <?php echo $form->dropDownList($model,'tipo', array('T' => 'Teoria', 'P' => 'Practicas'),array('empty'=>'Select one type...')); ?>
-		<?php echo $form->error($model,'tipo'); ?>
-	</div>
-
-	<div class="row">
-		<?php echo $form->labelEx($model,'idsubject'); ?>
-        <?php echo $form->dropDownList($model,'idsubject', CHtml::listData(Subject::model()->findAll(), 'id', 'nombre'), array('empty'=>'Select subject...')); ?>
-		<?php echo $form->error($model,'idsubject'); ?>
-	</div>
-
-	<div class="row">
-		<?php echo $form->labelEx($model,'iddevice'); ?>
-        <?php echo $form->dropDownList($model,'iddevice', CHtml::listData(Device::model()->findAll(), 'id', 'bname'), array('empty'=>'Select class...')); ?>
-		<?php echo $form->error($model,'iddevice'); ?>
-	</div>
-
-	<div class="row buttons">
-		<?php echo CHtml::submitButton($model->isNewRecord ? 'Create' : 'Save'); ?>
-	</div>
-
-<?php $this->endWidget(); ?>
-
-</div><!-- form -->
+                <div class="form-footer col-lg-offset-3 col-sm-offset-2">
+                    <?php echo CHtml::htmlButton($model->isNewRecord ? 'Create' : 'Update', array('type' => 'submit', 'class' => 'btn btn-primary')); ?>
+                </div>
+                <?php $this->endWidget(); ?>
+                <!-- </form> -->
+            </div>
+        </div><!--end .box -->
+    </div><!--end .col-lg-6 -->
+    <!-- END BASIC VALIDATION FORM -->
+</div><!--end .row -->

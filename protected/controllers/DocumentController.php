@@ -6,7 +6,7 @@ class DocumentController extends Controller
 	 * @var string the default layout for the views. Defaults to '//layouts/column2', meaning
 	 * using two-column layout. See 'protected/views/layouts/column2.php'.
 	 */
-	public $layout='//layouts/column2';
+    public $title = '';
 
 	/**
 	 * @return array action filters
@@ -61,9 +61,10 @@ class DocumentController extends Controller
 	 */
 	public function actionView($id)
 	{
-		$this->render('view',array(
-			'model'=>$this->loadModel($id),
-		));
+        $this->layout='main';
+        $this->title='Document';
+
+        $this->redirect(array('index'));
 	}
 
 	/**
@@ -72,6 +73,9 @@ class DocumentController extends Controller
 	 */
 	public function actionCreate()
 	{
+        $this->layout='main';
+        $this->title='Document';
+
 		$model = new Document;
 
 		// Uncomment the following line if AJAX validation is needed
@@ -85,12 +89,12 @@ class DocumentController extends Controller
             $model->size = ($model->file->size) / 1024 / 1024; // MB
 
             $subject = Subject::model()->findByPk($model->idsubject);
-            $model->path = '/../files/'.$subject->iniciales;
+            $model->path = '/files/'.$subject->iniciales;
 
 			if($model->save()) {
                 $model->file->saveAs(Yii::app()->basePath.$model->path.'/'.$model->file);
 
-                $this->redirect(array('view', 'id' => $model->id));
+                $this->redirect(array('index'));
             }
 		}
 
@@ -106,6 +110,9 @@ class DocumentController extends Controller
 	 */
 	public function actionUpdate($id)
 	{
+        $this->layout='main';
+        $this->title='Document';
+
 		$model = $this->loadModel($id);
 
         $oldFile = $model->file;
@@ -121,20 +128,20 @@ class DocumentController extends Controller
             $uploadedFile = CUploadedFile::getInstance($model,'file');
 
             $subject = Subject::model()->findByPk($model->idsubject);
-            $model->path = '/../files/'.$subject->iniciales;
+            $model->path = '/files/'.$subject->iniciales;
 
             // Change file
             if ($uploadedFile != null) {
                 $model->file = $uploadedFile->name;
                 $model->size = $uploadedFile->size / 1024 / 1024; // MB
 
-                unlink(Yii::app()->basePath.'/../files/'.$oldSubject->iniciales.'/'.$oldFile);
+                unlink(Yii::app()->basePath.'/files/'.$oldSubject->iniciales.'/'.$oldFile);
             }
 
             // Change subject
             if ($oldSubject->id != $subject->id && $uploadedFile == null) {
-                copy(Yii::app()->basePath.'/../files/'.$oldSubject->iniciales.'/'.$oldFile, Yii::app()->basePath.'/../files/'.$subject->iniciales.'/'.$oldFile);
-                unlink(Yii::app()->basePath.'/../files/'.$oldSubject->iniciales.'/'.$oldFile);
+                copy(Yii::app()->basePath.'/files/'.$oldSubject->iniciales.'/'.$oldFile, Yii::app()->basePath.'/files/'.$subject->iniciales.'/'.$oldFile);
+                unlink(Yii::app()->basePath.'/files/'.$oldSubject->iniciales.'/'.$oldFile);
             }
 
             if($model->save()) {
@@ -147,7 +154,7 @@ class DocumentController extends Controller
 
 			$model->attributes=$_POST['Document'];
 			if($model->save())
-				$this->redirect(array('view','id'=>$model->id));
+                $this->redirect(array('index'));
 		}
 
 		$this->render('update',array(
@@ -170,7 +177,7 @@ class DocumentController extends Controller
 
 		// if AJAX request (triggered by deletion via admin grid view), we should not redirect the browser
 		if(!isset($_GET['ajax']))
-			$this->redirect(isset($_POST['returnUrl']) ? $_POST['returnUrl'] : array('admin'));
+            $this->redirect(array('index'));
 	}
 
 	/**
@@ -178,14 +185,19 @@ class DocumentController extends Controller
 	 */
 	public function actionIndex()
 	{
+        $this->layout='main';
+        $this->title='Document';
+
         // echo Yii::app()->basePath;
 
         // Yii::app()->basePath.$model->path.'/'.$model->file
 
+        /*
         echo CHtml::link(
             'pdf',
             Yii::app()->createUrl('/files/ALEM/horarios.pdf') ,
             array('class'=>'button'));
+        */
 
 		$dataProvider=new CActiveDataProvider('Document');
 		$this->render('index',array(

@@ -72,7 +72,7 @@ class Document extends CActiveRecord
 			'size' => 'Size',
 			'date' => 'Date',
 			'visibility' => 'Visibility',
-			'idsubject' => 'Idsubject',
+			'idsubject' => 'Asignatura',
 			'path' => 'Path',
 			'file' => 'File',
 		);

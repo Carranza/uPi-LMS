@@ -1,21 +1,13 @@
 <?php
-/* @var $this UserAttendanceController */
-/* @var $model UserAttendance */
+$this->pageTitle=Yii::app()->name. ' - Anotations';
 
 $this->breadcrumbs=array(
-	'User Attendances'=>array('index'),
-	$model->iduser=>array('view','id'=>$model->iduser),
-	'Update',
+    array('name' => 'Anotations', 'url' => array('userAttendance/index')),
+    array('name' => 'Create'),
 );
 
-$this->menu=array(
-	array('label'=>'List UserAttendance', 'url'=>array('index')),
-	array('label'=>'Create UserAttendance', 'url'=>array('create')),
-	array('label'=>'View UserAttendance', 'url'=>array('view', 'iduser'=>$model->iduser, 'idattendance'=>$model->idattendance)),
-	array('label'=>'Manage UserAttendance', 'url'=>array('admin')),
-);
 ?>
 
-<h1>Update UserAttendance <?php echo $model->iduser; ?></h1>
+<?php $action='Update '; ?>
 
-<?php $this->renderPartial('_form', array('model'=>$model)); ?>
+<?php $this->renderPartial('_form', array('model'=>$model, 'action'=>$action)); ?>

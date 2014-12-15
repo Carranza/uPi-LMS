@@ -52,8 +52,8 @@ class UserAttendance extends CActiveRecord
 	public function attributeLabels()
 	{
 		return array(
-			'iduser' => 'Iduser',
-			'idattendance' => 'Idattendance',
+			'iduser' => 'User',
+			'idattendance' => 'Attendance',
 		);
 	}
 

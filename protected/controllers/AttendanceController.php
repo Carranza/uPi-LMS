@@ -6,7 +6,7 @@ class AttendanceController extends Controller
 	 * @var string the default layout for the views. Defaults to '//layouts/column2', meaning
 	 * using two-column layout. See 'protected/views/layouts/column2.php'.
 	 */
-	public $layout='//layouts/column2';
+	public $title='';
 
 	/**
 	 * @return array action filters
@@ -60,9 +60,12 @@ class AttendanceController extends Controller
 	 */
 	public function actionView($id)
 	{
-		$this->render('view',array(
-			'model'=>$this->loadModel($id),
-		));
+        $this->layout='main';
+        $this->title='Attendances';
+
+        $this->render('view',array(
+            'model'=>$this->loadModel($id),
+        ));
 	}
 
 	/**
@@ -71,6 +74,9 @@ class AttendanceController extends Controller
 	 */
 	public function actionCreate()
 	{
+        $this->layout='main';
+        $this->title='Attendances';
+
 		$model=new Attendance;
 
 		// Uncomment the following line if AJAX validation is needed
@@ -80,9 +86,9 @@ class AttendanceController extends Controller
 		{
 			$model->attributes=$_POST['Attendance'];
 
-            $model->end = date('Y-m-d h:i:s', strtotime('+'.$model->end.' minute'));
+            $model->end = date('Y-m-d G:i:s', strtotime('+'.$model->end.' minute'));
 			if($model->save()) {
-                $this->redirect(array('view', 'id' => $model->id));
+                $this->redirect('index');
             }
 		}
 
@@ -98,6 +104,9 @@ class AttendanceController extends Controller
 	 */
 	public function actionUpdate($id)
 	{
+        $this->layout='main';
+        $this->title='Attendances';
+
 		$model=$this->loadModel($id);
 
 		// Uncomment the following line if AJAX validation is needed
@@ -107,9 +116,9 @@ class AttendanceController extends Controller
 		{
 			$model->attributes=$_POST['Attendance'];
 
-            $model->end = date('Y-m-d h:i:s', strtotime('+'.$model->end.' minutes', strtotime($model->start)));
+            $model->end = date('Y-m-d G:i:s', strtotime('+'.$model->end.' minutes', strtotime($model->start)));
 			if($model->save())
-				$this->redirect(array('view','id'=>$model->id));
+				$this->redirect('index');
 		}
 
 		$this->render('update',array(
@@ -124,11 +133,14 @@ class AttendanceController extends Controller
 	 */
 	public function actionDelete($id)
 	{
+        $this->layout='main';
+        $this->title='Attendances';
+
 		$this->loadModel($id)->delete();
 
 		// if AJAX request (triggered by deletion via admin grid view), we should not redirect the browser
 		if(!isset($_GET['ajax']))
-			$this->redirect(isset($_POST['returnUrl']) ? $_POST['returnUrl'] : array('admin'));
+            $this->redirect('index');
 	}
 
 	/**
@@ -136,6 +148,9 @@ class AttendanceController extends Controller
 	 */
 	public function actionIndex()
 	{
+        $this->layout='main';
+        $this->title='Attendances';
+
         /*
         $criteria = new CDbCriteria();
         $criteria->condition = 'bMAC=:bMAC';

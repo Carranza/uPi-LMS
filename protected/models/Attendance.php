@@ -69,8 +69,8 @@ class Attendance extends CActiveRecord
 			'start' => 'Start',
 			'end' => 'End',
 			'tipo' => 'Tipo',
-			'idsubject' => 'Idsubject',
-			'iddevice' => 'Iddevice',
+			'idsubject' => 'Asignatura',
+			'iddevice' => 'Dispositivo',
 		);
 	}
 

@@ -1,18 +1,13 @@
 <?php
-/* @var $this AttendanceController */
-/* @var $model Attendance */
+$this->pageTitle=Yii::app()->name. ' - Attendances';
 
 $this->breadcrumbs=array(
-	'Attendances'=>array('index'),
-	'Create',
+    array('name' => 'Attendances', 'url' => array('attendance/index')),
+    array('name' => 'Create'),
 );
 
-$this->menu=array(
-	array('label'=>'List Attendance', 'url'=>array('index')),
-	array('label'=>'Manage Attendance', 'url'=>array('admin')),
-);
 ?>
 
-<h1>Create Attendance</h1>
+<?php $action='Create '; ?>
 
-<?php $this->renderPartial('_form', array('model'=>$model)); ?>
+<?php $this->renderPartial('_form', array('model'=>$model, 'action'=>$action)); ?>
