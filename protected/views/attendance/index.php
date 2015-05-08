@@ -1,8 +1,8 @@
 <?php
-$this->pageTitle=Yii::app()->name. ' - Attendances';
+    $this->pageTitle=Yii::app()->name. ' - Attendances';
 
-$this->breadcrumbs=array(
-);
+    $this->breadcrumbs=array(
+    );
 ?>
 
 <div class="row">

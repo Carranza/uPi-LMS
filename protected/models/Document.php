@@ -43,8 +43,8 @@ class Document extends CActiveRecord
 			array('id, name, size, date, visibility, idsubject, path, file', 'safe', 'on'=>'search'),
 
             array('file', 'file', 'types'=>'jpg,jpeg,doc,docx,xls,xlsx,pdf',
-                'maxSize'=>1024 * 1024 * 3, // 3MB
-                'tooLarge'=>'The file was larger than 3MB. Please upload a smaller file.',
+                'maxSize'=>1024 * 1024 * 100, // 100 MB
+                'tooLarge'=>'The file was larger than 100 MB. Please upload a smaller file.',
                 'allowEmpty' => true),
 		);
 	}
@@ -72,7 +72,7 @@ class Document extends CActiveRecord
 			'size' => 'Size',
 			'date' => 'Date',
 			'visibility' => 'Visibility',
-			'idsubject' => 'Asignatura',
+			'idsubject' => 'Subject',
 			'path' => 'Path',
 			'file' => 'File',
 		);

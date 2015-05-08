@@ -85,12 +85,8 @@ class UserAttendanceController extends Controller
 		{
 			$model->attributes=$_POST['UserAttendance'];
 
-            // Device
-            // TODO: filter for creation
-            // $device = Device::model()->findByPk($model->idattendance);
-
-			if($model->save())
-                $this->redirect(array('index'));
+            if($model->save())
+                $this->redirect(array('view','iduser'=>$model->iduser, 'idattendance'=>$model->idattendance));
 		}
 
 		$this->render('create',array(
@@ -120,7 +116,9 @@ class UserAttendanceController extends Controller
                 $this->redirect(array('index'));
 		}
 
-        $this->redirect(array('index'));
+        $this->render('update',array(
+            'model'=>$model,
+        ));
 	}
 
 	/**
@@ -146,6 +144,9 @@ class UserAttendanceController extends Controller
 	 */
 	public function actionIndex()
 	{
+        $this->layout='main';
+        $this->title='Anotations';
+
 		$dataProvider=new CActiveDataProvider('UserAttendance');
 		$this->render('index',array(
 			'dataProvider'=>$dataProvider,
