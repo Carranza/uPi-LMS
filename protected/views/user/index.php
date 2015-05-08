@@ -1,8 +1,12 @@
 <?php
-$this->pageTitle=Yii::app()->name. ' - Users';
+    $this->pageTitle=Yii::app()->name. ' - Users';
 
-$this->breadcrumbs=array(
-);
+    /*
+    $this->breadcrumbs=array(
+        array('name' => 'Users', 'url' => array('user/index')),
+        array('name' => 'Index',),
+    );
+    */
 ?>
 
 <div class="row">

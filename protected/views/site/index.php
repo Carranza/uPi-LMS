@@ -1,10 +1,12 @@
 <?php
     $this->pageTitle=Yii::app()->name. ' - Home';
 
+    /*
     $this->breadcrumbs=array(
         array('name' => 'Home', 'url' => array('site/index')),
-        array('name' => 'Home',),
+        array('name' => 'Index',),
     );
+    */
 ?>
 
 <div class="row">

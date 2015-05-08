@@ -33,7 +33,7 @@
                         <?php echo $form->labelEx($model,'idattendance', array('class'=>'control-label')); ?>
                     </div>
                     <div class="col-lg-9 col-sm-10">
-                        <?php echo $form->dropDownList($model,'idattendance', CHtml::listData(Subject::model()->findAll(), 'id', 'nombre'), array('empty'=>'Select subject...', 'class'=>'form-control')); ?>
+                        <?php echo $form->dropDownList($model,'idattendance', CHtml::listData(Attendance::model()->findAll(), 'id', 'start'), array('empty'=>'Select attendance...', 'class'=>'form-control')); ?>
                     </div>
                 </div>
 

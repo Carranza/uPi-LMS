@@ -1,8 +1,8 @@
 <?php
-$this->pageTitle=Yii::app()->name. ' - Devices';
+    $this->pageTitle=Yii::app()->name. ' - Devices';
 
-$this->breadcrumbs=array(
-);
+    $this->breadcrumbs=array(
+    );
 ?>
 
 <div class="row">

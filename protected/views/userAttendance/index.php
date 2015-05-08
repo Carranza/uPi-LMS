@@ -1,13 +1,13 @@
 <?php
-$this->pageTitle=Yii::app()->name. ' - Anotations';
+    $this->pageTitle=Yii::app()->name. ' - Anotations';
 
-$this->breadcrumbs=array(
-);
+    $this->breadcrumbs=array(
+    );
 ?>
 
 <div class="row">
     <div class="col-lg-2">
-        <?php echo CHtml::link('Create Registration',array('/userAttendance/create'), array('class'=>'btn btn-primary btn-block')); ?>
+        <?php echo CHtml::link('Create Anotation',array('/userAttendance/create'), array('class'=>'btn btn-primary btn-block')); ?>
         <br/>
     </div>
 </div>

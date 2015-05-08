@@ -1,8 +1,8 @@
 <?php
-$this->pageTitle=Yii::app()->name. ' - Documents';
+    $this->pageTitle=Yii::app()->name. ' - Documents';
 
-$this->breadcrumbs=array(
-);
+    $this->breadcrumbs=array(
+    );
 ?>
 
 <div class="row">
@@ -23,7 +23,7 @@ $this->breadcrumbs=array(
                     <thead>
                     <tr>
                         <th>Name</th>
-                        <th>Size</th>
+                        <th>Size (MB)</th>
                         <th>Date</th>
                         <th>Visibility</th>
                         <th>Subject</th>

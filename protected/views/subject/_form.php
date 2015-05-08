@@ -10,7 +10,7 @@
     <div class="col-lg-12">
         <div class="box box-outlined">
             <div class="box-head">
-                <header><h4 class="text-light"><?php echo $action; ?><strong>User</strong></h4></header>
+                <header><h4 class="text-light"><?php echo $action; ?><strong>Subject</strong></h4></header>
             </div>
             <div class="box-body no-padding">
                 <?php $form=$this->beginWidget('CActiveForm', array(

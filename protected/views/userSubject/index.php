@@ -1,7 +1,7 @@
 <?php
-$this->pageTitle=Yii::app()->name. ' - Registrations';
+    $this->pageTitle=Yii::app()->name. ' - Registrations';
 
-$this->breadcrumbs=array(
+    $this->breadcrumbs=array(
 );
 ?>
 
