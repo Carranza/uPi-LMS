@@ -81,14 +81,14 @@ class ApiController extends Controller
                 foreach($models as $model) {
 
                     $criteria2 = new CDbCriteria();
-                    // $criteria->select = 'id, iniciales';
                     $criteria2->condition = 'idsubject=:idsubject';
                     $criteria2->params = array(':idsubject'=>$model->idsubject);
 
-                    $document = Document::model()->find($criteria2);
+                    $documents = Document::model()->findAll($criteria2);
 
-                    $rows[] = $document->attributes;
-
+                    foreach($documents as $document) {
+                        $rows[] = $document;
+                    }
                 }
 
                 $this->_sendResponse(200, CJSON::encode($rows));
@@ -133,6 +133,17 @@ class ApiController extends Controller
                     } else {
                         $model->$var = $value;
                     }
+                }
+
+                break;
+            case 'annotation':
+                $model = new UserAttendance;
+                $model->iduser = '1';
+
+                $attendances = Attendance::model()->findAll();
+
+                foreach($attendances as $attendance) {
+                    $model->idattendance = $attendance->id;
                 }
 
                 break;
@@ -197,7 +208,6 @@ class ApiController extends Controller
         }
     }
 
-    // TODO: poner en minusculas todos los codigos de error
     private function _getStatusCodeMessage($status)
     {
         $codes = array(
